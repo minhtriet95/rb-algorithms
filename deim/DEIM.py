@@ -18,7 +18,7 @@ from decorators.timer import show_execution_time
 class DEIMApproximation:
     # Constructor for DEIM approximation class
     def __init__(self, x_list, mu_list, basis):
-        self.use_latex(True)
+        # self.use_latex(True)
         self.x_list = x_list
         self.mu_list = mu_list
         self.basis = basis
@@ -169,8 +169,10 @@ class DEIMApproximation:
         interval = len(self.mu_list)
         plt.plot(np.linspace(1, interval, interval), Sigma, 'o-')
         plt.yscale("log")
-        plt.xlabel("Snapshots", fontsize=16, usetex=True)
-        plt.ylabel("Singular values", fontsize=16, usetex=True)
+        # plt.xlabel("Snapshots", fontsize=16, usetex=True)
+        # plt.ylabel("Singular values", fontsize=16, usetex=True)
+        plt.xlabel("Snapshots", fontsize=16)
+        plt.ylabel("Singular values", fontsize=16)
         plt.grid()
 
 
